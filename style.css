@@ -4,40 +4,48 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
-.product {
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+    padding-top: 10vh;
+} */
+#product {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
     display: flex;
-    flex-wrap: wrap;
+
 }
 
-.left-column {
+.part1 {
     width: 40%;
 }
 
-#productImg {
-    width: 100%;
-    margin-top: 50px;
-}
-
-.right-column {
+.part2 {
     width: 60%;
     margin-top: 40px;
     padding-left: 30px;
 }
 
-.product-description {
+.part1 img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.product-details {
     margin-bottom: 40px;
 }
 
-.product-description h1 {
+.product-details h1 {
     font-weight: 300;
     font-size: 44px;
     letter-spacing: -2px;
 }
 
-.product-description h4 {
+.product-details h4 {
     margin-top: 20px;
     font-weight: 200;
     font-size: 20px;
@@ -45,7 +53,7 @@
     color: rgb(27, 25, 25);
 }
 
-.product-description h3 {
+.product-details h3 {
     margin-top: 20px;
     font-weight: 200;
     font-size: 20px;
@@ -53,26 +61,26 @@
     color: rgb(27, 25, 25);
 }
 
-#price {
+.product-details h3 .spanPrice {
     color: #009688;
     font-weight: bold;
 }
 
-.product-description p{
+.product-description p {
     margin-top: 20px;
     font-size: 16px;
     font-weight: 300;
     color: #86939e;
 }
 
-.product-preview .previewImg {
+.product-preview .preview-image {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     margin-top: 20px;
 }
 
-.product-preview .previewImg img {
+.product-preview .preview-image img {
     margin: 5px;
     width: 15%;
     height: 30%;
@@ -80,6 +88,44 @@
     padding: 4px;
     border-radius: 6px;
 }
+ .active {
+     border: 2px solid #009688;
+ }
+ 
 
+ @media screen and (max-width: 768px) {
+     #product {
+         display: flex;
+         flex-wrap: wrap;
+     }
 
+     .part1 {
+         width: 100%;
+     }
 
+     .part2 {
+         width: 100%;
+         margin-top: 40px;
+         padding-left: 30px;
+     }
+
+     .part1 img {
+         margin-top: 30px;
+     }
+
+     .product-details h1 {
+         font-size: 34px;
+     }
+
+     .product-details h4 {
+         font-size: 14px;
+     }
+
+     .product-details h3 {
+         font-size: 17px;
+     }
+
+     .product-description p {
+         font-size: 14px;
+     }
+ } 
